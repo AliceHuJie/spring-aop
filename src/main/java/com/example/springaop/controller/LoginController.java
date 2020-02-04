@@ -20,9 +20,6 @@ public class LoginController {
 
     @RequestMapping("/test")
     public void hello(@RequestParam("name") String name, HttpServletResponse resp) throws IOException {
-        long start = System.currentTimeMillis();
         loginService.login(name, resp);
-        long end = System.currentTimeMillis();
-        System.out.println("接口执行时间" + (end - start));
     }
 }
